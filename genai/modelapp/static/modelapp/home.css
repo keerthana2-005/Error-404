@@ -3,6 +3,9 @@ body {
     padding: 0;
     scroll-behavior: smooth;
   }
+  html{
+    scroll-behavior: smooth;
+  }
   * {
     margin: 0;
     padding: 0;
@@ -16,6 +19,8 @@ body {
   #home-section{
     margin-top:80px;
   }
+  
+
   .btn{
     background-color:  #5ca2d1;
     color: white;
@@ -42,6 +47,42 @@ body {
     width: 80%;
     align-items: center; /* Align image and text area side by side */
   }
+
+  #scale:hover{
+    background-color: #6a8fb7;
+    cursor: pointer;
+  }
+
+  .health-score-info {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align items to the left */
+    scroll-margin-top: 60px;
+    background-color: #F3F8FF;
+    width: 80%;
+    margin: 10px auto;
+    padding: 30px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 15px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.health-score-info h4 {
+    margin-bottom: 10px; /* Space below the heading */
+    font-size: 1.5em; /* Increase heading size */
+}
+
+.health-score-info p {
+    line-height: 1.6; /* Increase line height for readability */
+    margin: 5px 0; /* Space between paragraphs */
+}
+
+.health-score-info strong {
+    color: #333; /* Darker color for stronger emphasis */
+}
+
   
   /* Chatbot image styling */
   #chat-section img {
@@ -386,6 +427,45 @@ body {
     border-bottom: 1px solid #ddd;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
+
+  #FAQ-section {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    scroll-margin-top: 60px;
+    background-color: #F3F8FF;
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 15px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#faq {
+    color: #2f5488;
+    font-weight: bold;
+    text-align: center; /* Center text within the heading */
+}
+
+.question {
+    margin: 15px 0; /* Space between questions */
+    padding: 10px;
+    width: 100%; /* Make the question div take full width */
+    background-color: white;
+    border-radius: 10px;
+}
+
+.question:hover{
+  cursor: pointer;
+}
+
+.answer {
+    display: none; /* Initially hide the answers */
+    margin-top: 5px; /* Space between question and answer */
+    color: #555; /* Lighter color for answers */
+}
+
                                           /* HOME styling */
   .home-section {
     display: flex;

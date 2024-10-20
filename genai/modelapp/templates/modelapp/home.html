@@ -26,7 +26,10 @@
             <a href="#home-section">Home</a>
             <a href="#chat-section">Chat</a>
             <a href="#about-section">About</a>
-            <a href="#contact-section">Contact</a>
+            <a href="#FAQ-section">FAQs</a>
+            <a href="#contact-section">Contact Us</a>
+            
+
         </div>  
         <div class="spacer"></div>
         <div class="dropdown">
@@ -98,6 +101,7 @@
                                          <!--Chat section-->  
     <!-- Add this inside your chat section -->
 <section id="chat-section">
+    <button id="scale" style="color: black; background-color: white; margin-left: 15px; padding: 10px; background-color: aliceblue; border-radius: 3px;"><a>Health Score Scale ⬇️</a></button>
     <img src="{% static 'modelapp/chatbot.jpg'%}">
     <div class="container">
         <form id="formId" enctype="multipart/form-data" method="post">
@@ -132,17 +136,44 @@
     </div>
 </section>
 
-                                        <!-- About section -->        
-    <section id="about-section">
-        <h2 style="font-weight: bolder;text-align: left;">Why ConsumeWise?</h2><br>
+<div class="health-score-info">
+    <h4>Health Score Scale</h4>
+    
+    <p><strong>90-100:</strong> Excellent (Very Healthy)<br>
+    
+    Characteristics: Highly nutritious, low in harmful ingredients.<br>
+    Examples: Fresh fruits, vegetables, lean proteins, whole grains.</p>
+    
+    <p><strong>70-89:</strong> Good (Balanced)<br>
+    Characteristics: Generally healthy, moderate amounts of less desirable nutrients.<br>
+    Examples: Low-fat yogurt, nuts, whole grain bread.</p>
+    
+    <p><strong>50-69:</strong> Average (Moderate Health)<br>
+    Characteristics: Higher unhealthy nutrients, some positive elements.<br>
+    Examples: Some cereals, processed meats, flavored yogurts.</p>
+    
+    <p><strong>30-49:</strong> Poor (Unhealthy)<br>
+    Characteristics: Nutritionally poor, high unhealthy ingredients.<br>
+    Examples: Packaged snacks, sugary drinks, fast food.</p>
+    
+    <p><strong>0-29:</strong> Very Poor (Highly Unhealthy)<br>
+    Characteristics: Heavily processed, low nutritional benefits.<br>
+    Examples: Candy, soda, fried foods, junk food.</p>
+</div>
+
+
+
+                                     <!-- About section -->        
+<section id="about-section">
+    <h2 style="font-weight: bolder;text-align: left;">Why ConsumeWise?</h2><br>
         <img src="{% static 'modelapp/logo.png'%}" class="square-image">
-        <div class="about-section">
-            <div class="about-item">
-                <img src="{% static 'modelapp/image7.avif'%}" alt="Health Impact">
-                <p><b>Health Impact</b><br>
-                    Verifiable info on ingredients and their effects on health
-                </p>
-            </div>
+            <div class="about-section">
+                <div class="about-item">
+                    <img src="{% static 'modelapp/image7.avif'%}" alt="Health Impact">
+                        <p><b>Health Impact</b><br>
+                            Verifiable info on ingredients and their effects on health
+                        </p>
+                </div>
             <div class="about-item">
                 <img src="{% static 'modelapp/image3.jpg' %}" alt="Health Impact">
                 <p><strong>Cost-Sensitivity</strong><br> Balance affordability and health-conscious consumption for users.</p>
@@ -156,7 +187,37 @@
                 <p><strong>Convenience</strong><br> Tailored insights are provided at the right moment in a shopper's journey.</p>
             </div>
         </div>  
-    </section>
+</section>
+
+{% comment %} FAQs section {% endcomment %} 
+
+
+<div id="FAQ-section">
+    <h1 id="faq">Frequently Asked Questions</h1>
+    <div class="question" onclick="toggleAnswer(this)">
+        <h2>How do i use ConsumeWise ?</h2>
+        <div class="answer">First, navigate to your profile and edit your details by adding your medical condition and age. Save the changes, then return to the home page. In the chatbox, enter only the product name for the most accurate results. This will provide you with a personalized health analysis based on your health condition.</div>
+    </div>
+    <div class="question" onclick="toggleAnswer(this)">
+        <h2>What is Health Score?</h2>
+        <div class="answer">A health score is a numerical representation of the nutritional quality of a food product, reflecting its overall healthiness based on its nutrient composition. It helps consumers make informed choices about their diet by assessing how beneficial or harmful a food is to health.</div>
+    </div>
+    
+</div>
+
+<script>
+function toggleAnswer(question) {
+    const answer = question.querySelector('.answer');
+    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+        
+
+
+
+
+
+   
                                         <!--Contact Section -->
     <section id="contact-section">
         <footer class="footer">
