@@ -281,45 +281,6 @@ def base(request):
     return render(request, 'modelapp/basenew.html')
 
 
-# def index(request):
-#   if request.method == 'POST':
-#     product_name = request.POST.get("product_name","")
-#     nutrients = ""
-#     claims = ""
-#     nutritional_info = ""
-#     condition = User.objects.get(condition=condition)
-
-#     # Fetch product information from OpenFoodFacts API
-#     search_url = f"https://world.openfoodfacts.org/cgi/search.pl?search_terms={product_name}&search_simple=1&action=process&json=1&fields=product_name,brands,nutrition_grades,ingredients_text,nutriments,labels_tags"
-#     response = requests.get(search_url)
-    
-
-    # genai.configure(api_key="AIzaSyBPSa7Ss2Gr3DK_wDcmkMm861c_7A-u9jU")
-#     # Create the model
-#     generation_config = {
-#         "temperature": 1,
-#         "top_p": 0.95,
-#         "top_k": 64,
-#         "max_output_tokens": 10000,
-#         "response_mime_type": "text/plain",
-#     }
-
-#     model = genai.GenerativeModel(
-#         model_name="tunedModels/peopleai-sp9ruaca9v5z",
-#         generation_config=generation_config,
-#         # safety_settings = Adjust safety settings
-#         # See https://ai.google.dev/gemini-api/docs/safety-settings
-#     )
-
-#     chat_session = model.start_chat(
-#         history=[
-#         ]
-#     )
-
-#     response = chat_session.send_message(f"Based on Product details name:{product_name},Nutrients:{nutrients},claims:{claims},nutritional_information:{nutritional_info}.Give a health analysis for a person having a {condition} the format of the result should be a heading \"health analysis\" and give some points on how the ingridients of the product can affect the person having {condition} also tell in how much quantity the user can consume the particular product in a day and the next heading should be \"recommended diet/food\" and some dietary guidance on what he or she can consume if they have {condition},Conclude by telling if the claims are true or false and elaborate shortly,AND MOST IMPORTANTLY , if any of the {product_name},{nutrients},{claims} or {nutritional_info} has values like N/A, take your own relavant values")
-
-
-    
 
 
 
